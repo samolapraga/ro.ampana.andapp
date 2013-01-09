@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/lytContent"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/flora_white">
+
+    <RelativeLayout 
+        android:id="@+id/lytTitleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/titlebar">
+        
+        <TextView 
+            android:id="@+id/txtTitleApp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+    
+    <ImageView 
+        android:id="@+id/imgSeparator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/white"
+		android:layout_below="@+id/lytTitleBar"/>
+    
+    <ScrollView 
+        android:id="@+id/sclAbout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+		android:layout_below="@+id/imgSeparator"
+        android:fadeScrollbars="true">	
+        
+        <LinearLayout 
+		    android:id="@+id/lytAbout"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:gravity="center"
+		    android:padding="10dip">
+	    	
+	        <ImageView 
+	        	android:id="@+id/imgLogoApp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/icon_launcher"
+	            android:layout_marginTop="20dip"
+	            android:layout_marginBottom="10dip"/>
+	        <TextView 
+	            android:id="@+id/txtAppName"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/app_name"
+	            android:textSize="20sp"
+	            android:textStyle="bold"
+                android:textColor="@color/dark_grey1"/>
+	        <TextView 
+	            android:id="@+id/txtAbout"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="13sp"
+	            android:gravity="center"
+				android:textColor="@color/dark_grey1"/>
+		</LinearLayout>
+    
+	</ScrollView>
+</RelativeLayout>
